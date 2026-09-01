@@ -27,7 +27,7 @@ void soma_ultrapassar_z(int X, int Z){
     int aux = X;
     int soma = X;
     printf("%i", X);
-    while(soma < Z){
+    while(soma <= Z){
         aux++;
         quantidade++;
         printf(" + %i",aux);
