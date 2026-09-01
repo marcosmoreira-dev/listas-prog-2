@@ -9,7 +9,7 @@ X Z Resposta
 30 40 2 (30+31=61)*/
 #include <stdio.h>
 void soma_ultrapassar_z(int X, int Z);
-int main(){
+int main(void){
 int condicao,X,Z;
 condicao = 1;
 while(condicao != 0){
