@@ -17,7 +17,7 @@ int main(){
     scanf("%i", &param);
     int num_maiores = maiores(num, vetor, param);
     if(num_maiores == 0)printf("Nao existem numeros maiores!");
-    else printf("Existem %i maiores que %i", num_maiores, param);
+    else printf("Existem %i numeros maiores que %i", num_maiores, param);
     return 0;
 }
 int maiores(int n, int * vet, int x){
