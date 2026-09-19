@@ -32,7 +32,6 @@ char char_maius(char c){
     return c;
 }
 void CamelCase(char* s){
-    int aux = 0;
     s[0] = char_maius(s[0]);
     for(int i = 1; s[i] != '\0'; i++){
         if(s[i] == ' '){
