@@ -39,7 +39,8 @@ typedef struct candidato {
 } Candidato;
 
 void le_candidatos(int n, Candidato **candidatos);
-void impreme_candidatos(int n, Candidato **candidatos)
+void impreme_candidatos(int n, Candidato **candidatos);
+void muda_sala(Candidato **candidatos)
 
 int main() {
     int n; // número de candidatos
@@ -56,43 +57,54 @@ int main() {
     }
 
 
-    int nMenu;
+    int nMenu = 1;
     printf("=========== MENU ===========");
-    printf("Digite 1 para ler todos os dados e 2 para imprimir os dados: ");
-    scanf("%d", nMenu);
-    if (nMenu == 1) { // Leitura dos dados
-            for (int i = 0; i < n; i++) {
-            printf("Digite a inscrição do candidato %d", i);
-            scanf("%d", &candidatos[i]->inscr);
 
-            printf("Digite o nome do candidato %d: ", i);
-            scanf(" %80s", &candidatos[i]->nome);
+    while (nMenu != 0) {
+        printf("1- Ler dados dos candidatos\n2- Imprimir todos os dados\n3- Mudar endereço e sala de determinado candidato\n0- Sair");
+        scanf("%d", nMenu);
 
-            printf("Digite o dia de nascimento do candidato: ");
-            scanf("%d", &candidatos[i]->nasc.dia);
-
-            printf("Digite o mês de nascimento do candidato: ");
-            scanf("%d", &candidatos[i]->nasc.mes);
-
-            printf("Digite o ano de nascimento do candidato: ");
-            scanf("%d", &candidatos[i]->nasc.ano);
-
-            printf("Digite o endereço do local de provas: ");
-            scanf(" %80s", &candidatos[i]->loc->ender);
-
-            printf("Digite o número da sala onde ocorrerá a prova: ");
-            scanf("%d", &candidatos[i]->loc->sala);
-            
-            printf("Digite a nota geral das provas desse candidato: ");
-            scanf("%f", &candidatos[i]->nt.geral);
-
-            printf("Digite a nota específica desse candidato: ");
-            scanf("%f", &candidatos[i]->nt.especifica);
+        if (nMenu == 1) {
+            le_candidatos(n, candidatos);
+        } else if (nMenu == 2) {
+            impreme_candidatos(n, candidatos);
+        } else if (nMenu == 3) {
+            muda_sala(candidatos)
         }
-    } else if (nMenu == 2) {
-        printf("Você precisa primeiro ler os dados!");
     }
-
+    
+    
 
     return 0;
+}
+
+void le_candidatos(int n, Candidato **candidatos) {
+    for (int i = 0; i < n; i++) {
+        printf("Digite a inscrição do candidato %d", i);
+        scanf("%d", &candidatos[i]->inscr);
+
+        printf("Digite o nome do candidato %d: ", i);
+        scanf(" %80s", &candidatos[i]->nome);
+
+        printf("Digite o dia de nascimento do candidato: ");
+        scanf("%d", &candidatos[i]->nasc.dia);
+
+        printf("Digite o mês de nascimento do candidato: ");
+        scanf("%d", &candidatos[i]->nasc.mes);
+
+        printf("Digite o ano de nascimento do candidato: ");
+        scanf("%d", &candidatos[i]->nasc.ano);
+
+        printf("Digite o endereço do local de provas: ");
+        scanf(" %80s", &candidatos[i]->loc->ender);
+
+        printf("Digite o número da sala onde ocorrerá a prova: ");
+        scanf("%d", &candidatos[i]->loc->sala);
+            
+        printf("Digite a nota geral das provas desse candidato: ");
+        scanf("%f", &candidatos[i]->nt.geral);
+
+        printf("Digite a nota específica desse candidato: ");
+        scanf("%f", &candidatos[i]->nt.especifica);
+        }
 }
