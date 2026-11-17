@@ -48,7 +48,7 @@ int main(void)
     puts("Primeira chamada (tamanho == 3) retorna 1010 para main");
     puts("|De volta na main:|");
     puts("numero_binario = 1010");
-    puts("O numero digitado em binario e': 1010\n");
+    puts("O numero digitado em binario e: 1010\n");
     puts("EXEMPLO 2");
     puts("n = 7");
     puts("tamanho = 0 | indice = 7 (condicao do laco for: indice > 0)");
@@ -85,7 +85,7 @@ int main(void)
     puts("Primeira chamada (tamanho == 2) retorna 111 para main");
     puts("|De volta na main:|");
     puts("numero_binario = 111");
-    puts("O numero digitado em binario e': 111\n");
+    puts("O numero digitado em binario e: 111\n");
     puts("EXEMPLO 3");
     puts("n = 20");
     puts("tamanho = 0 | indice = 20 (condicao do laco for: indice > 0)");
@@ -136,6 +136,6 @@ int main(void)
     puts("Primeira chamada (tamanho == 4) retorna 10100 para main");
     puts("|De volta na main:|");
     puts("numero_binario = 10100");
-    puts("O numero digitado em binario e': 10100");
+    puts("O numero digitado em binario e: 10100");
     return 0;
 }
